@@ -7531,7 +7531,6 @@ sub handle_json_charset {
    my ($row, $sel_cols, $type_for) = @_;
    my @idx = get_sel_cols_index_for_json($sel_cols, $type_for);
    foreach my $i (@idx) {
-      print $i;
       @$row[$i] = decode("UTF-8", @$row[$i]);
    }
 }
